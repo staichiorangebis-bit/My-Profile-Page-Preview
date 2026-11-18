@@ -1,0 +1,67 @@
+/* セクション全体 */
+.contact-section {
+  padding: 60px 40px;
+  max-width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contact-title {
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #2c5c97;
+  display: inline-block;
+  color: #333;
+}
+
+.contact-desc {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 40px;
+  line-height: 1.6;
+}
+
+/* カードグリッド */
+.contact-grid {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* 連絡先カード */
+.contact-card {
+  background: #fff;
+  padding: 30px 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  flex: 1 1 200px;
+  max-width: 240px;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+}
+
+.contact-icon {
+  font-size: 2rem;
+  margin-bottom: 12px;
+}
+
+.contact-label {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 6px;
+}
+
+.contact-value {
+  font-size: 1rem;
+  color: #025;
+  font-weight: 500;
+  word-break: break-all;
+}

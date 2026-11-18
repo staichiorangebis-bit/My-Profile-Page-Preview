@@ -1,0 +1,125 @@
+/* セクション全体 */
+.hobbies-section {
+  padding-top: 2rem;
+  padding-bottom: 8rem;
+  max-width: 70%;
+  margin: auto;
+  margin-top: 3rem;
+  margin-bottom: 4rem;
+  text-align: center;
+  position: relative;
+  border-radius: 12px;
+  min-height: 400px;
+  overflow: hidden;
+}
+
+/* セクション調整用 */
+.hobbies-section-ajust{
+  padding: 1.5rem 2rem 4rem 2rem;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* 背景レイヤーコンテナ */
+.bg-layer {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+/* 各背景画像：フェード対応 */
+.bg-image {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transition: opacity 0.6s ease-in-out; /* フェード速度 こで調整 */
+}
+
+/* デフォルト背景：薄いベースカラー */
+.bg-image.default {
+  opacity: 1;
+  background: linear-gradient(135deg, #f5f8fa00, #eef4f900);
+}
+
+/* アクティブ時：フェードイン */
+.bg-image.active {
+  opacity: 1;
+}
+
+/* 半透明オーバーレイ：文字を読みやすく */
+.bg-image::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: rgba(255, 255, 255, 0.6);
+  transition: background-color 0.4s ease;
+}
+
+.bg-image.active::after {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+/* コンテンツ本体：背景の上に表示 */
+.hobbies-content {
+  position: relative;
+  z-index: 2;
+}
+
+.hobbies-title {
+  font-size: 1.3rem;
+  margin-bottom: 30px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #2c5c97;
+  display: inline-block;
+  color: #222;
+}
+
+/* カードコンテナ */
+.hobbies-grid {
+  display: flex;
+  max-width: 90%;
+  margin: auto;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* 趣味カード */
+.hobby-card {
+  background: rgba(255, 255, 255, 0.92);
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  flex: 1 1 220px;
+  max-width: 260px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.hobby-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  background: #fff;
+}
+
+.hobby-icon {
+  font-size: 2rem;
+  margin-bottom: 12px;
+}
+
+.hobby-name {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.hobby-desc {
+  font-size: 0.9rem;
+  color: #444;
+  line-height: 1.6;
+}

@@ -1,0 +1,121 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.app-wrap {
+  display: flex;
+  min-height: 100vh;
+  font-family: system-ui, sans-serif;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 60px;
+  background: #1e293b;
+  color: #fff;
+  overflow-x: hidden;
+  overflow-y: auto;
+  transition: width 0.3s ease;
+  z-index: 100;
+}
+.sidebar.open {
+  width: 240px;
+}
+
+.parent-list {
+  list-style: none;
+  padding: 2rem 0;
+}
+
+.parent-item {
+  position: relative;
+}
+
+/* 親リンク：a / div 両方に適用 */
+.parent-link {
+  display: flex;
+  align-items: center;
+  padding: 1rem 1.25rem;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.2s;
+  color: inherit;
+  text-decoration: none;
+}
+.parent-link:hover {
+  background: #334155;
+}
+
+.parent-link .icon {
+  width: 24px;
+  flex-shrink: 0;
+  text-align: center;
+  margin-right: 0.75rem;
+  font-size: 1.1rem;
+}
+
+.parent-link .label {
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  flex: 1;
+}
+.sidebar.open .label {
+  opacity: 1;
+}
+
+.parent-link .arrow {
+  font-size: 0.7rem;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+.sidebar.open .arrow {
+  opacity: 0.7;
+}
+
+/* ===== サブメニュー ===== */
+.submenu {
+  list-style: none;
+  background: #283548;
+  max-height: 0;
+  opacity: 0;
+  transition: max-height 0.25s ease, opacity 0.2s ease;
+  overflow: hidden;
+}
+.submenu.show {
+  max-height: 300px;
+  opacity: 1;
+}
+
+.sub-item {
+  padding: 0;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.sub-item a {
+  display: block;
+  padding: 0.85rem 1.5rem 0.85rem 3.25rem;
+  color: #e2e8f0;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+.sub-item a:hover {
+  background: #475569;
+  color: #fff;
+}
+
+/* メインコンテンツ */
+.main {
+  flex: 1;
+  margin-left: 60px;
+  padding: 2rem 2.5rem;
+  transition: margin-left 0.3s ease;
+  background: #f8fafc;
+}
+.main.shifted {
+  margin-left: 240px;
+}

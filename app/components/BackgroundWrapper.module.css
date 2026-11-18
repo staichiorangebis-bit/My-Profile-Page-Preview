@@ -1,0 +1,20 @@
+/* 全体の背景コンテナ */
+.bgContainer {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding-top: 3rem;
+  padding-bottom: 5rem;
+  background-color: #e0e0e000; /* 画像読み込み前の代替色 */
+}
+/* 半透明白いボックス：中央7割 */
+.overlayBox {
+  position: relative;
+  z-index: 2;
+  width: 70%;
+  margin: 0 auto;
+  padding: 40px 30px;
+  background-color: rgba(255, 255, 255, 0.5); /* 透明度：0.85＝白85%・透け15% */
+  border-radius: 12px; /* 角丸：不要なら削除 */
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* 浮き上がり効果：不要なら削除 */
+}

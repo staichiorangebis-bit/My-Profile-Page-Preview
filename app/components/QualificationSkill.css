@@ -1,0 +1,109 @@
+/* 共通：職務経歴ページと完全に統一 */
+.page-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", sans-serif;
+}
+
+.timeline-item {
+  position: relative;
+  padding-left: 40px;
+  margin-bottom: 30px;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: #1a5ccc;
+  border: 3px solid #e6f0ff;
+}
+
+.content-card {
+  background-color: rgba(255, 255, 255, 0.85); /* 半透明：読みやすさ優先 */
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.category-title {
+  display: inline-block;
+  padding: 6px 16px;
+  border-radius: 20px;
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.qualification {
+  background-color: #1a5ccc;
+}
+
+.skill {
+  background-color: #f59e0b; /* アルバイト欄と同じオレンジ系 */
+}
+
+.item-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.item-list li {
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.date {
+  color: #666;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.name {
+  font-size: 15px;
+  color: #222;
+}
+
+.skill-group {
+  margin-bottom: 22px;
+}
+
+.group-heading {
+  font-size: 15px;
+  font-weight: bold;
+  color: #333;
+  margin: 0 0 12px 0;
+  padding-left: 8px;
+  border-left: 3px solid #ddd;
+}
+
+.skill-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.skill-list li {
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 15px;
+  color: #222;
+}
+
+.level {
+  color: #f59e0b;
+  font-weight: bold;
+  white-space: nowrap;
+}
